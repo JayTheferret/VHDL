@@ -26,22 +26,27 @@ end praktikum;
 
 architecture verhalten of praktikum is
 
+
+
 begin
 
 -- hier kommt Ihre Logik hin:
-with switch select
-led_g(0) <= switch(0) when "000" else '0';
-led_g(1) <= switch(0) when "001" else '0';
-led_g(2) <= switch(0) when "010" else '0';
-led_g(3) <= switch(0) when "011" else '0';
-led_g(4) <= switch(0) when "100" else '0';
-led_g(5) <= switch(0) when "101" else '0';
-led_g(6) <= switch(0) when "110" else '0';
-led_g(7) <= switch(0) when "011" else '0';
+
+led_g(0) <= switch(0) when key(2 downto 0) = "000" else '0';
+led_g(1) <= switch(0) when key(2 downto 0) = "001" else '0';
+led_g(2) <= switch(0) when key(2 downto 0) = "010" else '0';
+led_g(3) <= switch(0) when key(2 downto 0) = "011" else '0';
+led_g(4) <= switch(0) when key(2 downto 0) = "100" else '0';
+led_g(5) <= switch(0) when key(2 downto 0) = "101" else '0';
+led_g(6) <= switch(0) when key(2 downto 0) = "110" else '0';
+led_g(7) <= switch(0) when key(2 downto 0) = "011" else '0';
 
 -- Bsp: LED_R0 mit Key0 schalten:
-	--led_r(0) <= key(0);
+	
 
 
+	
 
 end verhalten;
+
+

@@ -26,20 +26,24 @@ end praktikum;
 
 architecture verhalten of praktikum is
 
+
+
 begin
 
 -- hier kommt Ihre Logik hin:
 
-    with key select 
-	    led_hex <= 	        "1000000" when "0000", -- 0
-						    "1111001" when "0001", -- 1
-						    "0100100" when "0010", -- 2
-						    "0111111" when others; -- others
+with switch select
+	hex_0 <=	"1000000" when "0000000000",
+				"1111001" when "0000000001",
+				"0100100" when "0000000010",
+				"0111111" when others;
 
 -- Bsp: LED_R0 mit Key0 schalten:
-	--led_r(0) <= key(0);
+
 
 
 	
 
 end verhalten;
+
+

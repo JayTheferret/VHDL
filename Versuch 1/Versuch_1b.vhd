@@ -29,12 +29,15 @@ architecture verhalten of praktikum is
 begin
 
 -- hier kommt Ihre Logik hin:
+led_g(0) <= (switch(0) and switch(1) and switch(2)) or switch(3);
 
-	led_r(0)<= (switch(0) and switch(1) and switch(0)) or switch(3);
 
 -- Bsp: LED_R0 mit Key0 schalten:
 	--led_r(0) <= key(0);
 
 
+	
 
 end verhalten;
+
+
