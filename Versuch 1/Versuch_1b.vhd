@@ -36,7 +36,5 @@ begin
 	--led_r(0) <= key(0);
 
 
-	
 
-end verhalten;
 end verhalten;
