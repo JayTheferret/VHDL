@@ -30,7 +30,11 @@ begin
 
 -- hier kommt Ihre Logik hin:
 
-	led_r(0)<= (switch(0) and switch(1) and switch(0)) or switch(3);
+    with key select 
+	    led_hex <= 	        "1000000" when "0000", -- 0
+						    "1111001" when "0001", -- 1
+						    "0100100" when "0010", -- 2
+						    "0111111" when others; -- others
 
 -- Bsp: LED_R0 mit Key0 schalten:
 	--led_r(0) <= key(0);
@@ -38,5 +42,4 @@ begin
 
 	
 
-end verhalten;
 end verhalten;
